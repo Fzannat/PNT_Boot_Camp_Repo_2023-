@@ -1,20 +1,73 @@
 What is the purpose of the public keyword in Java?
+    Answer: public keyword in java use as an access modifier. Purpose of using public keyword is that it specify
+    whether a class, method or field can accessed and used from other parts of the program, including from different
+    package.
 What is the purpose of the private keyword in Java?
+    Answer: private keyword is used in java to restrict visibility and accessibility of a class member such as method,
+    field and inner class with in a class. Its primary purpose is to encapsulate the internal state and behavior of a
+    class, providing control over who can access and modify these members.
 What is the purpose of the protected keyword in Java?
+    Answer: protected keyword is used to control visibility and accessibility of a class member(fields, methods, class)
+    in classes, subclasses and in under same packages. Its primary purpose is to strike a balance between encapsulation
+     and inheritance by allowing controlled access to members to support subclassing and code reusability.
 What is the purpose of the static keyword in Java?
+    Answer: static keyword is used to create members(classes, methods and fields) which belong to the class itself.
+    It is used in creating shared data, utilities, constant and so on.
 What is the purpose of the final keyword in Java?
+    Answer: final keyword is used when a member(methods, fields) can't be changed. It is used to enforced immutability
+    it is prevent method overriding, define constant. It is used for code maintainability, reliability, quality by
+    making some methods and fields unchangeable and undependable.
 What is the purpose of the abstract keyword in Java?
+    Answer: abstract keyword is used to define abstract classes and methods, which are essential for achieving
+    polymorphism, code reusability, and defining a common contract that subclasses must adhere to. Abstract classes
+    provide a way to create a hierarchical structure of related classes while enforcing specific behavior
+    in subclasses.
 What is the purpose of the interface keyword in Java?
+    Answer: interface keyword is used in java to declare interfaces, which defines a contract, allow a way to achieve
+    multiple inheritance and facilitate polymorphism.  When a class implements an interface, it is forced to provide
+    concrete implementations for all the methods declared in that interface. This ensures that specific behaviors
+    are defined in implementing classes.
 What is the purpose of the new keyword in Java?
+    Answer: Purpose of new keyword is creating instance of a class.
 What is the difference between a class and an object in Java?
+    Answer: Class is a blueprint for creating an object, and An object is instance of a class which defines states,
+    behaviour or action of a class. class is created in compile-time and objects are created on runtime.
 What is the purpose of the main() method in Java?
+    Answer: main() method is execution engine of a java program.
 What is the difference between a float and a double in Java?
+    Answer: float and double both are used to represent floating number. The main differences between two data type
+    is in size and precession. double hold 64 bit and float hold 32 bits. because double has more bits to represent
+    factional parts of a number, it has more precession than a float.
+
 What is the difference between an int and a long in Java?
+    Answer: These two data type are different in size and range. int has 32 bits, and long has 64 bits.
 What is the purpose of the System.out.println() method in Java?
+    Answer: purpose of using this method is to print a text in the output console.
 What is the purpose of the Scanner class in Java?
+    Answer: Purpose of using Scanner class in java is to read data primarily from the keyboard and a file. Its main
+    purpose is to facilitate the reading and parsing of different types of data, such as numbers, text, and other
+    tokens, from an input stream.
 What is the purpose of the Math class in Java?
+    Answer: Math Class is used in java to do wide range of mathematical functions in java.
 What is the purpose of the String class in Java?
+    Answer: The String class in Java is used to represent and manipulate sequences of characters. It provides a wide
+    range of methods to perform operations on strings, such as concatenation, comparison, searching, and extraction.
+    Strings are widely used in Java for text processing and are immutable, meaning their values cannot be changed
+    after creation, ensuring data integrity and security.
 What is the purpose of the StringBuilder class in Java?
+    Answer: The StringBuilder class in Java is used for efficiently constructing and manipulating mutable sequences
+    of characters, which are often referred to as "string buffers." Unlike the String class, which is immutable,
+    StringBuilder allows you to modify the contents of a string without creating new objects, making it more
+    efficient for tasks that involve frequent string concatenation or modification. It provides methods for
+    appending, inserting, deleting, and updating characters within the string buffer. This class is particularly
+    useful for building dynamic strings in situations where performance is a concern.
 What is the purpose of the equals() method in Java?
+    Answer: equals() is used in java to compare two instance of a class to see if content or value both method
+    are same.
 What is the purpose of the compareTo() method in Java?
+    Answer:  The compareTo() method in Java is used for comparing two objects of a class that implements the
+    Comparable interface. Its primary purpose is to establish a natural ordering or sorting of objects based on their
+    attributes.
 What is the purpose of the toString() method in Java?
+    Answer: toString() method is used to provide a text so that human can read. For examole, It converts an object
+    into a string format so that developer easily could understand.
