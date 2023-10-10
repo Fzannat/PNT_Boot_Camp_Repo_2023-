@@ -1,4 +1,4 @@
-package com.programming.level1;
+package com.programming.level3;
 
 import java.util.Random;
 
