@@ -9,6 +9,7 @@ public class EvenOrOdd {
         int number = scanner.nextInt();
         System.out.println();
         verifyEvenOrOdd(number);
+        scanner.close();
     }
     public static void verifyEvenOrOdd(int num){
         if(num%2==0){
