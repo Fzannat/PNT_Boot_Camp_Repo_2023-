@@ -5,7 +5,7 @@ What is the purpose of the public keyword in Java?
 What is the purpose of the private keyword in Java?
     Answer: private keyword is used in java to restrict visibility and accessibility of a class member such as method,
     field and inner class with in a class. Its primary purpose is to encapsulate the internal state and behavior of a
-    class, providing control over who can access and modify these members.
+    class in its own class, providing control over who can access and modify these members.
 What is the purpose of the protected keyword in Java?
     Answer: protected keyword is used to control visibility and accessibility of a class member(fields, methods, class)
     in classes, subclasses and in under same packages. Its primary purpose is to strike a balance between encapsulation

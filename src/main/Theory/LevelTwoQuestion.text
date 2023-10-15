@@ -51,14 +51,72 @@ What is the purpose of the finalize() method in Java?
     Answer: The finalize() method is a method provided by the Object class in Java. Its purpose is to allow an object
     to perform cleanup operations before it is garbage collected by the JVM. When the JVM decides to reclaim memory
     occupied by an object, it calls the finalize() method of that object (if it's overridden) to allow it to release r
-    esources or perform other cleanup tasks.
+    resources or perform other cleanup tasks.
 What is the purpose of the this keyword in Java?
+    Answer:this keyword is used to call or accessed the current class members (variable or method)
+           this keyword is required when we have a parameter with same name as an instance variable or field
+           NOTE: we can use either of them anywhere in a class, except for a static element, like a static method, any
+           attempt to do so can create a compile time error
+           This is commonly used in constructor when the instance variable name and parameter passed in the contractor
+           has the same name.
+           this() method is used to call a contractor from another overloaded contractor in the same class
+           Call of this() is only be used in a contractor, and it has to be the first executable statement in the
+           constructor
+           this() method is used in a constructor method chaining
 What is the difference between a superclass and a subclass in Java?
+    Answer: Superclass is a parent class and subclass is a child class. Super class hav all the common attributes and
+    behaviour that all the subclass can share. when a subclass extends to superclass it inherits all the behaviour,
+    attributes and actions(methods) of a parent class. A superclass cannot inherits from a subclass. A superclass can
+    have multiple subclasses but subclass cannot have multiple parents.
 What is the purpose of the package keyword in Java?
+    Answer: package keyword in java is used for organizing code in related group, control access meaning Packages
+    provide a level of access control and visibility. Classes within the same package can access each other's
+    package-private (default) members (fields, methods, and constructors) without needing to make them public. Classes
+    outside the package can only access the public members. It also ensure reusability and modularity of existing code.
 What is the difference between an instance variable and a class variable in Java?
+    Answer: An Instance variable is an instance of class. A class variable is also known as a static variable which
+    belong to the class. Static variable holds the same value for every action, however an instance variable holds an
+    unique value for every instance of that class. Any changes to the static variable will have an effect on every action
+    of that class, but changes to the instance variable do not change the outcome of the instances of that class.
 What is the purpose of the instanceof operator in Java?
+    Answer: he primary purposes of the instanceof operator are as follows:
+            Type Checking:
+            You can use instanceof to check if an object is an instance of a specific class or interface. This is
+            helpful when dealing with polymorphism, where objects of different types can be stored in a common
+            container (e.g., an array or a collection), and you need to perform type-specific operations.
+            Type Casting:
+            When you're dealing with object references of a more general type (e.g., a superclass or interface), you
+            can use instanceof to check the type of the object before casting it to a more specific type. This helps
+            avoid runtime exceptions like ClassCastException.
 What is the purpose of the super keyword in Java?
+    Answer: super keyword is used to call the parent class member(variable, methods). super keyword is used when we
+    override the parent class's method.
+    Note:super() is used in a constructor to call the parent class constructor
+         The call to the super() in constructor has to be the first executable statement in your method block
 What is the purpose of the abstract keyword in Java?
+    Answer: Abstract keyword is used to create abstract class and and methods. In abstract class you cannot create any
+    instance or object of this class. abstract classes works as a blueprint for other class which inherits from it.
+    Abstract methods are methods declared without an implementation (no method body).
+    Abstract methods are defined within abstract classes and are meant to be implemented by concrete subclasses that
+    extend the abstract class.
+    Subclasses must provide an implementation for all abstract methods, or they, too, must be declared as abstract.
+    Abstract classes and methods provide a way to create a hierarchy of related classes with a shared structure,
+    while still allowing flexibility for concrete subclasses to implement their specific functionality. Subclasses that
+    inherit from an abstract class must provide implementations for abstract methods, making them useful for defining
+    a common set of methods that should exist across a group of related classes.
 What is the purpose of the interface keyword in Java?
+    Answer: interface keyword is used to create an interface in java. An interface in java work as a contract. It cannot
+    have any instance variable, it can only have abstract method which will be implemented by the subclasses which implement
+    them. Multiple inheritance is possible with interface.
 What is the difference between a private and a protected access modifier in Java?
+    Answer: private and protected both keywords in java is to the control access of the class's fields and actions. When
+    we want our fields and methods to give access only in its classes we use private keyword. When we want to limit the
+    accessibility and visibility of the class's members(attributes, behaviour and actions) inside its own package, subclasses
+    and ints own classes, we use protected keyword.
 What is the purpose of the throws keyword in Java?
+    Answer: The throws keyword in Java is used to declare exceptions that a method might throw. It serves as both
+    documentation for developers and a mechanism for specifying and propagating exceptions. By including the throws
+    clause in a method's signature, developers communicate which exceptions can potentially be raised by the method.
+    This helps other code that uses the method to anticipate and handle these exceptions. When an exception declared
+    with throws occurs in the method, it can be propagated up the call stack, allowing higher-level code to handle
+    the exception, promoting clean and modular exception handling in Java applications.
