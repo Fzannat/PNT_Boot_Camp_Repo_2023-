@@ -26,11 +26,12 @@ public class TestLoginPage {
     }
 
     @Test
-    public void verifySignInWithValidCredential(){
+    public void verifySignInWithValidCredential() throws InterruptedException {
         driver.findElement(By.id("globalnav-menubutton-link-bag")).click();
         driver.findElement(By.xpath("//a[text() = 'Sign in']")).click();
-        //driver.findElement(By.xpath("//div[contains(@class, ' form-cell-wrapper')]"));//.sendKeys("Shahnewasshahana@gmail.com");
-        WebElement userEmailInputBox = driver.findElement(By.id("account_name_text_field"));
+        Thread.sleep(4000);
+        driver.findElement(By.xpath("//input[@class = 'force-ltr form-textbox-input ']")).sendKeys("Shahnewasshahana@gmail.com");
+
     }
 
     @AfterMethod

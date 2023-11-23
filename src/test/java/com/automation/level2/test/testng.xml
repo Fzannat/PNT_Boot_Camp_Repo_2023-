@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="/Users/fatemazannat/Desktop/Automation/PNT_Boot_Camp_2023/src/test/java/com/automation/level2/test/TestCases/RegisterTest.java">
+    <classes>
+        <class name="com.automation.level2.test.TestCases.RegisterTest"><methods><include name="verifyRegisterWithValidCredential"/></methods></class></classes></test><test verbose="2" preserve-order="true" name="/Users/fatemazannat/Desktop/Automation/PNT_Boot_Camp_2023/src/test/java/com/automation/level2/test/TestCases/NavigateToDifferentPageTest.java">
+    <classes><class name="com.automation.level2.test.TestCases.NavigateToDifferentPageTest"><methods><include name="verifyNavigateFrmHomePageToDifferentPage"/></methods></class></classes></test><test verbose="2" preserve-order="true" name="/Users/fatemazannat/Desktop/Automation/PNT_Boot_Camp_2023/src/test/java/com/automation/level2/test/TestCases/ShoppingCartTest.java"><classes><class name="com.automation.level2.test.TestCases.ShoppingCartTest"><methods><include name="verifyShoppingCartForCorrectProduct"/></methods></class>
+</classes>
+</test>
+</suite>
+
+
+

@@ -1,16 +1,163 @@
 What is the difference between the throw and throws keywords in Java?
+    Answer: The throws keyword in Java is used to declare exceptions that a method might throw. It serves as both
+        documentation for developers and a mechanism for specifying and propagating exceptions. By including the throws
+        clause in a method's signature, developers communicate which exceptions can potentially be raised by the method.
+        This helps other code that uses the method to anticipate and handle these exceptions. When an exception declared
+        with throws occurs in the method, it can be propagated up the call stack, allowing higher-level code to handle
+        the exception, promoting clean and modular exception handling in Java applications.
 What is the purpose of the finalize() method in Java? Why is it considered a bad practice to use it?
 What is the difference between an abstract class and an interface in Java? When would you use one
 over the other?
+    Answer: Abstract class can have both abstract and concrete methods. An interface can only have abstract method,
+    but after java 8, an interface can have default and static method with implementation. Abstract class can have
+    instance variable but interface can't have. multiple inheritance is not allowed in abstract class but you can
+    implement multiple interfaces. Abstract class is used when you want to provide a common base for multiple classes
+    that share some common behavior. Interface work as a contract that multiple class can be adhere to, irrespective
+    to their class hierarchy.
+    In many cases, the choice between an abstract class and an interface depends on the specific requirements of your
+    design. Often, a combination of both is used to take advantage of their respective strengths. If you have a common
+    base implementation for all classes, you have code that can be shared among several closely related classes, you
+    also have used non-public member and you want to access them from different classes, you might consider using abstract
+    method.On the other hand when you want to define a contract for multiple classes to implement(to achieve multiple
+    inheritance of type), and When you want to achieve a loosely coupled design where classes are not directly tied to
+    each other, you will be using interface.
 What is a Lambda expression in Java? Provide an example to explain its use.
+    Answer:A lambda expression is a concise way to express anonymous functions or methods. It enables the developer
+    to write more readable and compact code, especially when working with functional interfaces. Lambda expressions
+    were introduced in Java 8 as part of the language's support for functional programming.
+    Syntax of lambda expression: (parameters) -> expression
+    parameters: Represents the input parameters required by the lambda expression.
+    ->: Separates the parameters from the body of the lambda expression.
+    expression: Represents the computation performed by the lambda.
+    Lambda expressions are particularly beneficial when working with functional interfaces, such as those used
+    in the context of the Java Streams API or event handling. They offer a more concise and expressive way to define
+    functionality in a manner that aligns with the principles of functional programming
 What is the difference between the continue and break statements in Java?
+    Answer: break statement is used when programmer needs to terminate prematurely, causing control flow to exit the
+    loop and move to the next statement after the loop. The continue statement is used to skip the rest of the code
+    inside the loop for the current iteration and move to the next iteration. Mai difference between break and
+    continue statement is break statement is often used in situations where a certain condition is met, and the loop
+    no longer needs to continue its iterations, and It is often used when you want to skip the remaining code in the
+    loop for a specific condition but continue with the next iteration.
 What is the purpose of the volatile keyword in Java? Provide an example to explain its use.
+    Answer:In Java, the volatile keyword is used to indicate that a variable's value may be changed by multiple
+    threads simultaneously. It ensures that the variable is always read and written from and to the main memory,
+    preventing thread-specific caching of the variable's value. The volatile keyword is primarily used for variables
+    shared among multiple threads to guarantee visibility and avoid potential issues with thread synchronization.
 What is the difference between ArrayList and LinkedList in Java? When would you use one over the
 other?
+    Answer: ArrayList uses a dynamic array to store elements. The size of the array is automatically increased if the
+    collection grows or shrinks. LinkedList uses a doubly-linked list data structure, where each element points to the
+    next and previous elements.
+    ArrayList Provides fast random access to elements, as it uses an array, and accessing elements by index has a
+    time complexity of O(1). However, inserting or removing elements in the middle of the list can be slower,
+    especially as it may require shifting elements.LinkedList Provides fast insertion and removal of elements in the
+    middle of the list, as it involves adjusting pointers. However, random access by index is slower (O(n)) because
+    the list must be traversed from the beginning or end to reach the desired index.
+    ArrayList Typically consumes less memory than a LinkedList because it only needs to store elements and an array to
+    hold them. Requires additional memory to store the pointers for each element, making it generally less memory-efficient
+    than an ArrayList.
+
+    In general, if your application involves frequent insertions or removals in the middle of the list and random
+    access is not a primary concern, a LinkedList might be a more suitable choice. If you need fast random access and
+    efficient memory usage, an ArrayList is usually more appropriate. It's important to analyze the specific requirements
+    of your application to choose the most suitable implementation. Additionally, with the introduction of the Java
+    Collections Framework, the List interface provides a common set of methods, allowing you to switch between implementations
+    easily based on your application's needs.
+
 What is the difference between public, protected, and private access modifiers in Java?
+    Answer: In class public keyword means it is accessible to all the classes of that project. protected means it is accessible
+    only in the classes of same package. private means it is only accessible in the class it was declared.
+
 What is an exception in Java? Provide an example to explain the concept.
+    In Java, an exception is an event that occurs during the execution of a program and disrupts the normal flow of
+    the program's instructions. Exceptions are used to handle error conditions, such as runtime errors or exceptional
+    situations, that may occur during the execution of a program. When an exceptional condition arises, an object representing
+    that exception is thrown.
+
+    Exception handling in Java involves three main components:
+
+    Throwing an Exception: When a problem occurs, an exception is thrown using the throw keyword.
+
+    Catching an Exception: Code that may throw an exception is enclosed in a try block, and the exceptions are caught and handled in catch blocks.
+
+    Handling an Exception: If an exception is thrown, it is caught by an appropriate catch block that specifies how to handle the exception.
+
+
+
 What is the purpose of the static keyword in Java? Provide an example to explain its use.
+    Answer: static keyword is used in java to declare members of the class to belong to the class itself rather the
+    instance of the class. so sta
+    public class StaticExample {
+        // Static variable
+        static int staticVariable = 0;
+
+        // Static method
+        static void incrementStaticVariable() {
+            staticVariable++;
+        }
+
+        public static void main(String[] args) {
+            // Accessing static variable
+            System.out.println("Initial value of staticVariable: " + StaticExample.staticVariable);
+
+            // Calling static method
+            incrementStaticVariable();
+
+            // Accessing updated static variable
+            System.out.println("Updated value of staticVariable: " + StaticExample.staticVariable);
+        }
+    }
+    in this example "staticVariable" is belong the class not to the instance of class, and it is shared between all
+    the instances of that class. static method can be call by using the class name without creating an object of
+    that class
 What is a constructor in Java? Provide an example to explain its use.
+    Answer: constructor is the blue print for creating an object or instance of a class. constructor is called to
+    initialize the state and and behaviour of an object. constructor has the same name as the class.
+    public class Car {
+        // Instance variables
+        String model;
+        int year;
+        String color;
+
+        // Constructor with parameters
+        public Car(String model, int year, String color) {
+            this.model = model;
+            this.year = year;
+            this.color = color;
+        }
+
+        // Constructor without parameters (default constructor)
+        public Car() {
+            // Default values
+            this.model = "Unknown";
+            this.year = 0;
+            this.color = "Unspecified";
+        }
+
+        // Method to display information about the car
+        public void displayInfo() {
+            System.out.println("Model: " + model);
+            System.out.println("Year: " + year);
+            System.out.println("Color: " + color);
+        }
+
+        public static void main(String[] args) {
+            // Creating an instance of Car using the parameterized constructor
+            Car myCar = new Car("Toyota Camry", 2022, "Blue");
+
+            // Displaying information about the car
+            System.out.println("Information about my car:");
+            myCar.displayInfo();
+
+            // Creating an instance of Car using the default constructor
+            Car defaultCar = new Car();
+
+            // Displaying information about the default car
+            System.out.println("\nInformation about the default car:");
+            defaultCar.displayInfo();
+        }
+    }
 What is the purpose of the interface keyword in Java? Provide an example to explain its use.
 What is a thread in Java? Provide an example to explain the concept.
 What is the purpose of the super keyword in Java? Provide an example to explain its use.

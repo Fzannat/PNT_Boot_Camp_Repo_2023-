@@ -1,0 +1,8 @@
+Create a Page Object Model for the registration page of a website. Use Page Factory to initialize the elements.
+Write a TestNG test to verify successful registration with valid credentials.
+Create a Page Object Model for the checkout page of a website. Use Page Factory to initialize the elements.
+Write a TestNG test to add a product to the cart, navigate to the checkout page, and verify that the correct product
+is being purchased.
+Create a Page Object Model for the home page of a website. Use Page Factory to initialize the elements.
+Write a TestNG test to navigate to the home page, verify the presence of certain elements, and click on a link to
+navigate to a different page.
