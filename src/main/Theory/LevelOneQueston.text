@@ -158,13 +158,116 @@ What is a constructor in Java? Provide an example to explain its use.
             defaultCar.displayInfo();
         }
     }
-What is the purpose of the interface keyword in Java? Provide an example to explain its use.
-What is a thread in Java? Provide an example to explain the concept.
+What is the purpose of the interface keyword in Java?
+    Answer: In Java, the interface keyword is used to declare an interface, which is a type of reference similar to a
+    class. However, unlike a class, an interface defines a contract of methods without providing their implementation.
+    It serves as a blueprint for classes that implement it, enforcing a set of rules or a specific structure. Interfaces
+    in Java enable the achievement of abstraction, encapsulation, and multiple inheritance.
+
 What is the purpose of the super keyword in Java? Provide an example to explain its use.
-What is a package in Java? Provide an example to explain the concept.
-What is a method in Java? Provide an example to explain the concept.
-What is the difference between a HashMap and a TreeMap in Java? When would you use one over the
-other?
-What is the purpose of the assert keyword in Java? Provide an example to explain its use.
+    Answer: In Java, the super keyword is used to refer to the immediate parent class object. It is primarily employed
+    to invoke the parent class methods, access parent class fields, and explicitly call the parent class constructor.
+    The super keyword is especially useful in scenarios where a subclass overrides a method defined in its superclass,
+    and you want to invoke the overridden method of the superclass.
+
+    class Animal {
+        void eat() {
+            System.out.println("Animal is eating");
+        }
+    }
+
+    class Dog extends Animal {
+        void eat() {
+            super.eat(); // Calling the eat() method of the parent class (Animal)
+            System.out.println("Dog is eating");
+        }
+
+        void bark() {
+            System.out.println("Dog is barking");
+        }
+    }
+
+    public class Main {
+        public static void main(String[] args) {
+            Dog myDog = new Dog();
+            myDog.eat(); // Calls the overridden eat() method in Dog class
+            myDog.bark(); // Calls the bark() method in Dog class
+        }
+    }
+
+What is a package in Java?
+    Answer: In Java, a package is a mechanism for organizing and structuring classes and interfaces. It helps in
+    avoiding naming conflicts, grouping related classes, and providing a hierarchical structure to the code. Packages
+    can be considered as containers that hold related types, providing a way to organize and manage the codebase.
+
+What is the purpose of the assert keyword in Java?
+    Answer:
+    In Java, the assert keyword is used for assertion checking, which is a mechanism to check assumptions about the
+    program during development and testing. Assertions are typically used to express conditions that should be true at
+    a specific point in the code, and they help identify bugs and logical errors early in the development process.
+
 What is the difference between final, finally, and finalize keywords in Java?
+    Answer:
+    The final keyword is used to declare a variable, method, or class as unmodifiable or constant. When applied to a
+    variable, it indicates that its value cannot be changed. When applied to a method, it means that the method cannot
+    be overridden by subclasses. And when applied to a class, it means that the class cannot be subclassed.
+
+    The finally keyword is used in exception handling. It defines a block of code that will be executed whether an
+    exception is thrown or not. This block is often used for cleanup operations, ensuring that resources are released
+    regardless of whether an exception occurred in the try block or not.
+
+    The finalize method is a method of the Object class that gets called by the garbage collector before an object is
+    reclaimed. It can be overridden in a class to perform cleanup activities, but its use is discouraged, and developers
+    are often encouraged to use other resource management techniques, like try-with-resources for automatic resource
+    management.
+
+    To summarize, final is used for declaring constants or making elements unmodifiable, finally is used in exception
+    handling for cleanup operations, and finalize is a method in the context of garbage collection, although its direct
+    usage is discouraged in modern Java programming.
+
+
 What is polymorphism in Java? Explain with an example.
+    Answer: Polymorphism in Java refers to the ability of a single entity (such as a method or a class) to take on
+    multiple forms. There are two types of polymorphism in Java: compile-time (method overloading) and runtime (method
+    overriding).
+    Compile-time Polymorphism (Method Overloading):
+    Method overloading allows a class to have multiple methods having the same name but with different parameters.
+    The compiler determines which method to invoke based on the number and types of arguments.
+
+    public class Calculator {
+        public int add(int a, int b) {
+            return a + b;
+        }
+
+        public double add(double a, double b) {
+            return a + b;
+        }
+
+        public String add(String a, String b) {
+            return a + b;
+        }
+    }
+
+    Runtime Polymorphism (Method Overriding):
+    Method overriding allows a subclass to provide a specific implementation for a method that is already defined in
+    its superclass. The decision about which method to call is made at runtime. Here's an example:
+
+
+    class Animal {
+        public void sound() {
+            System.out.println("Animal makes a sound");
+        }
+    }
+
+    class Dog extends Animal {
+        public void sound() {
+            System.out.println("Dog barks");
+        }
+    }
+
+    public class Main {
+        public static void main(String[] args) {
+            Animal myDog = new Dog(); // Upcasting
+            myDog.sound(); // Calls Dog's overridden sound method
+        }
+    }

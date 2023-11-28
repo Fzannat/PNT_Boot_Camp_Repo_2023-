@@ -1,0 +1,153 @@
+What are the different modifiers in Java?
+    Answer:
+    In Java, modifiers are keywords that modify the behavior, accessibility, and characteristics of classes, methods,
+    and variables. Access modifiers, such as public, protected, default (package-private), and private, control the
+    visibility of these elements. Non-access modifiers include static for methods and variables, indicating they belong
+    to the class rather than an instance; final to prevent inheritance, method overriding, or variable reassignment;
+    abstract for abstract classes and methods; transient to indicate variables that should not be serialized; and
+    volatile for variables that may be changed by multiple threads. These modifiers provide a means to encapsulate
+    and manage the structure and behavior of Java code, enhancing its readability, security, and flexibility.
+
+What is the difference between default and protected access modifiers in Java?
+    Answer:
+    In Java, the default (package-private) and protected access modifiers control the visibility of classes, methods,
+    and variables. The default access level makes elements accessible within the same package but restricts access from
+    outside that package. On the other hand, the protected access level allows access within the same package and by
+    subclasses, even if they are in different packages. The key distinction is that protected extends the scope to
+    subclasses, facilitating inheritance, while the default access is limited to the package level. Both modifiers play
+    crucial roles in encapsulation and managing the visibility of code components in Java applications.
+
+How to select a radio button in Selenium WebDriver?
+    Answer:To select a radio button in Selenium WebDriver, you can use the click() method on the WebElement representing
+    the radio button. First, locate the radio button using one of the locating strategies such as id, name, xpath, or
+    others. Once identified, use the click() method to simulate a user clicking on the radio button, effectively selecting it.
+
+Why do you get NoSuchElementException?
+    Answer: A NoSuchElementException in Selenium indicates that the WebDriver couldn't find a WebElement based on the provided
+    locator strategy. This can happen due to factors like using an incorrect locator, timing issues, dynamic content, or
+    the element not being present in the Document Object Model (DOM) at the time of the search. To mitigate this, use
+    appropriate locator strategies and consider implementing explicit waits to ensure the element is available before
+    interacting with it in your Selenium scripts.
+
+How can we fetch the page source in Selenium?
+    Answer:
+    In Selenium, you can fetch the page source using the getPageSource() method provided by the WebDriver interface.
+
+How can we fetch the title of the page in Selenium?
+    Answer:
+    In Selenium, you can fetch the page source using the getTitle() method provided by the WebDriver interface.
+
+What is the difference between static and instance variable in Java?
+    Answer: static variable belongs to the class itself and instance variable belong to instance of the class.
+
+What is the difference between static and non-static methods in Java?
+    Answer:
+    Static methods in Java are associated with the class and can be called using the class name without creating an instance.
+    They cannot directly access non-static members and are shared among all instances. Non-static (instance) methods, on the
+    other hand, are associated with class instances, can access both static and instance members, and require an object to
+    be created before invocation. Non-static methods can also be overridden in subclasses, while static methods cannot.
+
+What happens on specifying final modifier with variables and methods in Java?
+    Answer:
+    In Java, using the final modifier with variables and methods has specific implications. When applied to a variable,
+    it makes the variable a constant, meaning its value cannot be changed once assigned. For methods, final indicates
+    that the method cannot be overridden by subclasses. This ensures that the behavior of the method remains constant
+    across all inheriting classes. In the case of variables, it promotes immutability, enhancing code safety by preventing
+    inadvertent changes to critical values. For methods, it supports the design principle of maintaining a consistent
+    and unalterable functionality in certain class methods throughout the class hierarchy.
+
+What is the keyword used for inheriting the interfaces in Java?
+    Answer: implement keyword is used in java to inherit the interface in java
+
+Can Captcha be automated using Selenium?
+    Answer:
+    Automating Captcha is generally challenging and discouraged due to the security measures in place to prevent automated
+    bots from accessing certain features on websites. Captchas are specifically designed to be human-readable and challenging
+    for automated systems to solve. Automating Captcha goes against the purpose of using Captcha to distinguish between
+    human and automated interactions.
+
+How to clear the text inside the text box fields using Selenium WebDriver?
+    Answer:
+    To clear the text inside a text box field using Selenium WebDriver, you can use the clear() method provided by
+    the WebElement interface. This method removes any existing text from the input field.
+
+What is the default timeout of Selenium WebDriver?
+    Answer:
+    Selenium WebDriver itself does not have a default timeout for waiting; instead, it offers mechanisms for explicit and
+    implicit waits. Implicit waits, set using implicitlyWait, define the maximum time WebDriver should wait for an element
+    to be present. Explicit waits, implemented with WebDriverWait and ExpectedConditions, offer more granular control by
+    waiting for specific conditions before proceeding. The choice of timeout values depends on the characteristics and
+    requirements of the web application being tested, and it is common to set timeouts in seconds using TimeUnit.
+
+How can we submit a form in Selenium?
+    Answer:
+    n Selenium WebDriver, you can submit a form using the submit() method provided by the WebElement interface. The
+    submit() method simulates clicking on the submit button of a form element
+
+What is the purpose of getOptions() method?
+    Answer:
+    In Selenium, the getOptions() method is used to retrieve all the available options within a dropdown. It returns
+    a list of WebElement objects representing the options in the dropdown. Once you have obtained the list of options,
+    you can perform various operations such as selecting a specific option, verifying the presence of options, or
+    extracting text values from the options.
+
+Write an XPath to find all the hyper-links on a web page?
+    Answer: //a
+
+What is Select Class in Selenium WebDriver and how to use it?
+    Answer: The Select class in Selenium WebDriver is a part of the org.openqa.selenium.support.ui package and is
+    specifically designed for interacting with dropdown (select) elements on web pages. It provides methods for
+    selecting and deselecting options, retrieving selected options, and performing various operations related to
+    dropdowns.
+
+How to handle alerts in Selenium WebDriver?
+    Answer: using Alert class.
+
+What is click() command in Selenium WebDriver?
+    Answer: click() in selenium perform click action on clickable element.
+
+What is sendKeys() command in Selenium WebDriver?
+    Answer: sendKeys() in selenium sends user input in an element which takes input from the user
+
+How to delete cookies in Selenium?
+    Answer:In Selenium WebDriver, you can delete cookies using the deleteAllCookies() method provided by the
+    WebDriver.Options
+
+How to get the href of a link?
+    Answer:
+    To get the href attribute of a link using Selenium WebDriver in Java, you can use the getAttribute method
+            driver.get("https://example.com");
+            WebElement link = driver.findElement(By.cssSelector("your_locator"));
+
+            // Get the href attribute of the link
+            String hrefValue = link.getAttribute("href");
+
+            // Print the href value
+            System.out.println("Link Href: " + hrefValue);
+
+
+How do you click on a menu item in a drop down menu?
+
+How to get typed text from a textbox?
+    Answer: using getText()
+
+How to type text in a new line inside a text area?
+    Answer: o type text in a new line inside a text area using Selenium WebDriver in Java, you can use the sendKeys()
+    method along with the newline character (\n) or a combination of keys for newline.
+
+How to resize browser window using Selenium WebDriver?
+    Answer: To resize the browser window using Selenium WebDriver in Java, you can use the manage().window().setSize()
+    method on the WebDriver instance.
+
+
+How to scroll web page up and down using Selenium WebDriver?
+    Answer: To scroll a web page up and down using Selenium WebDriver in Java, you can use the JavascriptExecutor
+    interface to execute JavaScript commands.
+
+How to perform double click action in Selenium WebDriver?
+    Answer:To perform a double-click action in Selenium WebDriver using Java, you can use the Actions class. The Actions
+    class provides a method called doubleClick() for this purpose.
+
+How to perform drag and drop action in Selenium WebDriver?
+    Answer:Performing a drag-and-drop action in Selenium WebDriver using Java can be achieved using the Actions class.
+    The Actions class provides the dragAndDrop() method for this purpose.

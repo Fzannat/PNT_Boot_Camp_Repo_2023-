@@ -1,0 +1,80 @@
+What is Selenium ? What are the different components and versions
+of Selenium?
+Ans: Selenium is an open-source framework designed for automating web browsers, widely used in web application testing
+and automation. It provides a suite of tools that assist in automating interactions with web browsers. The main
+components of Selenium are: SeleniumWebDriver, Selenium IDE, grid.
+there are three version released selenium 1.0, 2.0, 3.0, 4.0
+
+What are Locators, different types of locators and their priorities in
+Selenium?
+Answer: There are 8 locator. id, name, class name, cssSelector, xpath, linkText, partial linkText, tagName
+Priority:
+    1.ID: High priority, as IDs should be unique within a page.
+    2.Name: Generally high priority if names are unique.
+    3.Class Name: Lower priority than ID and Name, as multiple elements can share the same class.
+    4.XPath and CSS Selector: Flexible and powerful but may have lower priority due to potential complexity and performance concerns.
+    5.Tag Name, Link Text, Partial Link Text: Typically lower priority, especially in complex or dynamic web pages.
+What are the different types of drivers in Selenium WebDriver?
+Answer: In Selenium WebDriver, the term "driver" refers to the browser-specific driver that communicates with the respective
+web browser and facilitates the interaction between Selenium scripts and the browser. Each browser has its own
+WebDriver implementation. The main types of drivers in Selenium WebDriver are: ChromeDriver, FirefoxDriver, EdgeDriver,
+SafariDriver, InternetExplorerDriver.
+
+How do I launch the browser using WebDriver?
+WebDriver driver = new BrowserNameDriver();
+example: WebDriver driver = new ChromeDriver();
+
+What are the different types of navigation commands in WebDriver?
+In Selenium WebDriver, navigation commands are used to navigate between different pages or interact with the browser's
+history. The WebDriver interface provides several methods for navigation. The main navigation commands are:
+WebDriver driver = new ChromeDriver();
+
+// Navigate to a website
+driver.get("https://www.example.com");
+
+// Navigate to another page
+driver.navigate().to("https://www.example2.com");
+
+// Go back to the previous page
+driver.navigate().back();
+
+// Go forward to the next page
+driver.navigate().forward();
+
+// Refresh the current page
+driver.navigate().refresh();
+
+// Close the browser
+driver.quit();
+
+
+
+How can you find whether an element is displayed on the screen
+using Selenium?
+Answer: driver.findElement(By.locator("").isDisplayed
+
+How can we get a text on a web element using Selenium WebDriver?
+Answer: driver.findElement(By.locator("").getText();
+
+How to type into a text box using Selenium?
+driver.findElement(By.locator("").sendKeys();
+
+How to handle a drop-down field and select a value from it
+using Selenium?
+Answer: using select tag
+
+What are the different types of waits available in WebDriver?
+WebDriver provides different types of waits to handle synchronization issues and ensure that scripts execute reliably.
+Implicit Wait sets a global timeout for the entire session, allowing WebDriver to wait for an element to be present
+before throwing an exception. Explicit Wait, on the other hand, offers more control by applying conditions to specific
+elements, such as visibility or presence, improving script stability and performance. The Fluent Wait is a flexible
+mechanism that defines maximum wait time and polling intervals, allowing customized conditions and exception handling
+during polling. These waits are essential for dealing with dynamic content and varying page load times, contributing to
+the effectiveness and reliability of automated test scripts. Adjusting wait times based on the application's behavior
+and potential delays ensures a smoother testing process.
+
+What is the latest Selenium tool?
+
+As of my last knowledge update in January 2022, Selenium 4 was the latest major release of the Selenium automation testing
+framework. Selenium 4 brought several new features, improvements, and better compatibility with modern web technologies.
+It included enhanced support for W3C WebDriver standards, improved relative locators, and updates to the Selenium Grid.

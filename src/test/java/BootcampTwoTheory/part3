@@ -1,0 +1,183 @@
+What is an XPath, difference between Absolute and Relative
+XPath with examples?
+Path is commonly used to locate and interact with elements on a web page. XPath expressions can be used to pinpoint
+elements based on attributes, text content, or their position in the document hierarchy.
+
+What is the disadvantage of Absolute XPath why is Relative
+XPath recommended?
+Brittle and prone to breakage if the structure of the HTML changes.
+
+What is an Absolute XPath? Write its syntax?
+    Answer: Absolute XPath provides the complete path from the root element to the target element. It starts with a
+    single forward slash (/) and includes the hierarchy of elements.
+    /html/body/div[1]/form/input[2]
+What is a Relative XPath? Write its syntax?
+    Answer: Relative XPath starts with a double forward slash (//) and allows selecting nodes anywhere in the document,
+    not just from the root. It is more flexible than absolute XPath.
+    //tagName[@attribute = 'value']
+
+How to execute JavaScript in Selenium?
+    Answer:
+    In Selenium, JavaScript can be executed using the JavascriptExecutor interface, which allows running JavaScript code
+    within the context of the current browser window or frame. The process involves creating an instance of JavascriptExecutor
+    by casting the WebDriver instance, and then using the executeScript() method to perform various tasks such as scrolling,
+    manipulating elements, or handling dynamic content. For example, you can scroll to the bottom of a page or change the
+    style of an element. While JavaScript execution provides advanced capabilities, it should be used selectively, and
+    traditional Selenium WebDriver methods are preferred when they offer better readability and maintainability.
+
+What is the concept that makes XPath Expressions powerful ?
+    Answer:
+    XPath expressions are powerful due to their ability to navigate XML or HTML documents with concise paths, select
+    elements based on attributes or text content, employ conditional filtering and predicates, support both relative
+    and absolute paths, include functions and operators for advanced operations, and offer cross-browser compatibility
+    in web automation with Selenium. XPath's versatility allows precise and flexible element identification,
+    contributing to its effectiveness in locating and interacting with elements on web pages.
+
+Why CSS Selectors have higher priority over XPath
+Expressions?
+    Answer:
+    CSS selectors often have higher priority over XPath expressions in web automation due to their simplicity,
+    readability, and efficiency. CSS selectors are native to web browsers and are commonly used in web development
+    for styling purposes. Selenium WebDriver leverages the browser's native support for CSS selectors, making their
+    execution more optimized and faster than XPath expressions. Additionally, CSS selectors are generally shorter and
+    more intuitive, providing a cleaner and more maintainable way to locate elements on a web page. This preference for
+    CSS selectors is reinforced by their wide acceptance and familiarity among web developers, making them a preferred
+    choice when possible. However, the choice between CSS selectors and XPath ultimately depends on the specific
+    requirements of the web application and the complexity of the element identification task at hand.
+
+Names of add-ons which can auto generate the XPath
+Expressions and CSS Selectors?
+    There are several browser extensions and add-ons that can assist in generating XPath expressions and CSS selectors. Here are a few popular ones:
+
+    ChroPath:
+
+    Browser Support: Chrome, Firefox
+    Features: ChroPath is a browser extension that works as an XPath and CSS selector editor. It provides a user-friendly interface to generate and edit locators.
+    SelectorGadget:
+
+    Browser Support: Chrome, Firefox
+    Features: SelectorGadget is a bookmarklet that helps users generate CSS selectors by interactively highlighting
+    and selecting elements on a web page.
+    XPath Helper:
+
+    Browser Support: Chrome
+    Features: XPath Helper is a Chrome extension that allows users to generate XPath expressions by simply clicking on
+    the desired element. It also provides real-time XPath evaluation.
+    FirePath (for Firefox):
+
+    Browser Support: Firefox
+    Features: FirePath is an add-on for Firefox that assists in generating, editing, and evaluating XPath and CSS selectors.
+    It works alongside the Firebug extension.
+    Relative XPath Finder:
+
+    Browser Support: Chrome, Firefox
+    Features: Relative XPath Finder is a browser extension that helps generate relative XPath expressions by providing
+    an easy-to-use interface.
+
+Java program for printing the even numbers between 1 and 100
+using for loop?
+    Answer:
+    public class evenNum {
+        public static void main(String[] args) {
+            for(int i = 0; i <= 100; i++){
+                if(i%2 == 0){
+                    System.out.println(i);
+                }
+            }
+        }
+    }
+
+Write a Java program to find the sum of first 100 numbers
+using for loop?
+    Answer:
+    public class SumOfFirst100Numbers {
+        public static void main(String[] args) {
+            // Initialize a variable to store the sum
+            int sum = 0;
+
+            // Use a for loop to iterate from 1 to 100
+            for (int i = 1; i <= 100; i++) {
+                // Add the current number to the sum
+                sum += i;
+            }
+
+            // Print the sum
+            System.out.println("The sum of the first 100 numbers is: " + sum);
+        }
+    }
+
+Prints numbers from 1 to 100. Print number and Divisible
+by 5 text if divisible?
+    Answer:
+    public class NumbersWithDivisibilityCheck {
+        public static void main(String[] args) {
+            // Use a for loop to iterate from 1 to 100
+            for (int i = 1; i <= 100; i++) {
+                // Check if the number is divisible by 5
+                if (i % 5 == 0) {
+                    // Print the number and "Divisible by 5" text
+                    System.out.println(i + " - Divisible by 5");
+                } else {
+                    // Print only the number
+                    System.out.println(i);
+                }
+            }
+        }
+    }
+
+Does Java supports multiple inheritance? Give reasons?
+    Answer:
+    Java does not support multiple inheritance for classes to avoid the diamond problem and maintain code simplicity.
+    The decision is intentional, and Java opts for a single inheritance model for classes. However, multiple inheritance
+    is supported through interfaces, allowing a class to implement multiple interfaces and inherit method signatures from
+    various sources without the complications associated with inheriting multiple implementations from different classes.
+    This design choice ensures clarity in method resolution and promotes a more manageable and predictable code structure.
+
+What is the parent or base class of all the classes in Java?
+    Answer:Object class
+
+What is the difference between instance variable and local variable?
+    Answer:
+    instance variables define the state of an object and have a lifespan tied to the object itself, while local
+    variables are short-lived and confined to the specific method or block in which they are declared. Instance
+    variables contribute to the object's state and characteristics, while local variables are utilized for temporary
+    storage within a specific method or code block.
+
+Is Java a pure 100% Object Oriented Programming language?
+    Answer:
+    Java is not a purely 100% object-oriented programming language due to the inclusion of primitive data types,
+    static members and methods, and support for procedural programming features. While Java incorporates key
+    object-oriented principles such as encapsulation, inheritance, and polymorphism, the existence of
+    non-object-oriented elements distinguishes it from languages that strictly adhere to OOP principles.
+    Nonetheless, Java is widely recognized and utilized as an object-oriented language with a strong emphasis on
+    classes and objects.
+
+What is the difference in between Primitive and Non-Primitive Data types in Java?
+    Answer:
+    The fundamental difference between primitive and non-primitive data types in Java centers around their nature and
+    behavior. Primitive data types are basic, not belonging to any class, directly storing values, and operated upon by
+    value. They include types like int, float, and boolean. Non-primitive data types, on the other hand, are derived from
+    classes, storing references to objects rather than actual data. They involve dynamic memory sizes, default to null if
+    not initialized, and are operated upon by reference. Examples of non-primitive data types include classes, arrays,
+    interfaces, and enums. In essence, primitive types handle values directly, while non-primitive types involve objects
+    and their associated methods.
+
+Why Strings are immutable in Java?
+    Answer:
+    Strings are immutable in Java for several reasons, including enhanced security by preventing inadvertent
+    modifications, improved thread safety as immutable strings can be safely shared among threads, support for caching
+    and string pooling optimizations, stability of hashcodes for consistent use in data structures, simplified memory
+    management aligning with Java's garbage collection, and improved code predictability due to the lack of unexpected
+    side effects. Immutability also allows for compiler optimizations, contributing to more efficient code execution.
+    Overall, the design choice of immutability in strings in Java offers a balance of security, performance, and
+    simplicity in programming.
+
+What is the difference between String and StringBuffer?
+    Answer:
+    The main difference between String and StringBuffer in Java is their mutability. Strings are immutable, meaning
+    their values cannot be changed after creation, while StringBuffer is mutable and allows modifications to the
+    content without creating new objects. Immutability in strings can lead to inefficiency during frequent modifications,
+    as new objects are created each time, impacting performance and memory usage. StringBuffer is designed for efficient
+    string manipulation and is thread-safe, making it suitable for scenarios with dynamic content changes. The choice between
+    them depends on the specific use case: use String for fixed content and StringBuffer for dynamic string manipulation,
+    especially in multithreaded environments.

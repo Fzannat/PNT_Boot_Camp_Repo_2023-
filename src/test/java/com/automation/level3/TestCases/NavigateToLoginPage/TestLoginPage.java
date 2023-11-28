@@ -19,7 +19,7 @@ public class TestLoginPage {
     public void setUp(){
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://www.apple.com/");
+        driver.get("https://www.demoblaze.com//");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(20));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
@@ -27,10 +27,14 @@ public class TestLoginPage {
 
     @Test
     public void verifySignInWithValidCredential() throws InterruptedException {
-        driver.findElement(By.id("globalnav-menubutton-link-bag")).click();
-        driver.findElement(By.xpath("//a[text() = 'Sign in']")).click();
-        Thread.sleep(4000);
-        driver.findElement(By.xpath("//input[@class = 'force-ltr form-textbox-input ']")).sendKeys("Shahnewasshahana@gmail.com");
+        driver.findElement(By.id("login2")).click();
+        driver.findElement(By.id("loginusername")).sendKeys("fz@gmail.com");
+        driver.findElement(By.id("loginpassword")).sendKeys("Selenium@123");
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("//button[text() = 'Log in']")).click();
+        String actualLoginConfirmation = driver.findElement(By.xpath("//a[text() = 'Welcome fz@gmail.com']")).getText();
+        String expectedLoginConfirmation = "Welcome fz@gmail.com";
+        Assert.assertTrue(actualLoginConfirmation.contains(expectedLoginConfirmation));
 
     }
 
